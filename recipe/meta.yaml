@@ -1,4 +1,4 @@
-{% set version = '0.4.1' %}
+{% set version = "0.4.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/runner_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/runner/runner_{{ version }}.tar.gz
-  sha256: b1c333858266236b0c2113d0547ea310454462790d6287059b713db314412cc6
+  sha256: d1605da4192fa20edf766aaf2510adacdd974f29627d8bd775f1501eebd37709
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -47,10 +47,7 @@ test:
 about:
   home: https://CRAN.R-project.org/package=runner
   license: GPL-2.0-or-later
-  summary: Lightweight library for rolling windows operations. Package enables full control over
-    the window length, window lag and a time indices. With a runner one can apply any
-    R function on a rolling windows. The package eases work with equally and unequally
-    spaced time series.
+  summary: Lightweight library for rolling windows operations. Package enables full control over the window length, window lag and a time indices. With a runner one can apply any R function on a rolling windows. The package eases work with equally and unequally spaced time series.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
