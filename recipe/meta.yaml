@@ -1,4 +1,4 @@
-{% set version = "0.4.3" %}
+{% set version = "0.4.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/runner_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/runner/runner_{{ version }}.tar.gz
-  sha256: df79b324c7889d779642f0cd961c8834341b94bec46264c9baf132f93e334d5d
+  sha256: 04b28813579fe22c89b1f84a3237cfa153754ddfb11971c989e38fceb895186e
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
